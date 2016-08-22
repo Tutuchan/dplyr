@@ -96,9 +96,11 @@ Collate:
     'sql-build.R'
     'sql-escape.r'
     'sql-generic.R'
+    'sql-merge.R'
     'sql-query.R'
     'sql-render.R'
     'sql-star.r'
+    'sql_build2.R'
     'src-local.r'
     'src-mysql.r'
     'src-postgres.r'
@@ -123,4 +125,4 @@ Collate:
     'utils.r'
     'view.r'
     'zzz.r'
-RoxygenNote: 5.0.1
+RoxygenNote: 5.0.1.9000

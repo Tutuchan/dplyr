@@ -21,10 +21,11 @@ sql_render.tbl_lazy <- function(query, con = NULL, ...) {
 
 #' @export
 sql_render.select_query <- function(query, con = NULL, ..., root = FALSE) {
-  from <- sql_subquery(con, sql_render(query$from, con, ..., root = root), name = NULL)
+
+  query <- sql_merge(query, query$from)
 
   sql_select(
-    con, query$select, from, where = query$where, group_by = query$group_by,
+    con, query$select, query$from, where = query$where, group_by = query$group_by,
     having = query$having, order_by = query$order_by, limit = query$limit,
     distinct = query$distinct,
     ...
